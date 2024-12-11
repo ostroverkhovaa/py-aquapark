@@ -9,7 +9,7 @@ class IntegerRange:
     def __set_name__(self, owner: str, name: str) -> None:
         self.protected_name = "_" + name
 
-    def __get__(self, instance: object, owner: str) -> None:
+    def __get__(self, instance: object, owner: str) -> int:
         return getattr(instance, self.protected_name)
 
     def __set__(self, instance: object, value: int) -> None:
